@@ -64,6 +64,24 @@ Without the Typeform/Calendly vars, the live site shows embed placeholders inste
 
 When you connect a custom domain (e.g. `zyvenahealth.com`), update `NEXT_PUBLIC_SITE_URL` to match.
 
+## Assessment results page
+
+After Typeform completion, redirect respondents to:
+
+```
+/results?score=72&category=moderate&areas=Constant+fatigue,Poor+sleep,Weight+management
+```
+
+| Parameter | Aliases | Description |
+|-----------|---------|-------------|
+| `score` | `risk_score` | Risk score 0–100 |
+| `category` | `risk_category` | `low`, `moderate`, or `high` |
+| `areas` | `key_risk_areas` | Comma-separated key risk areas |
+
+If `category` is omitted, it is inferred from score (low &lt; 34, moderate &lt; 67, high ≥ 67).
+
+Configure the redirect URL in Typeform → Settings → Endings.
+
 ## Build
 
 ```bash
