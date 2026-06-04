@@ -3,7 +3,7 @@ export const siteConfig = {
   tagline: "Metabolic Health. Personalized Care.",
   description:
     "Understand your metabolic health before it becomes a problem. Free assessment, doctor-led guidance, and biomarker-based insights.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://zyvenahealth.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://zyvena-health.vercel.app",
   email: "hello@zyvenahealth.com",
   typeformId: process.env.NEXT_PUBLIC_TYPEFORM_ID ?? "",
   calendlyUrl: process.env.NEXT_PUBLIC_CALENDLY_URL ?? "",

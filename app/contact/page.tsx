@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ContactForm } from "@/components/contact/ContactForm";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
@@ -21,7 +22,18 @@ export default function ContactPage() {
       />
       <section className="py-12 sm:py-16">
         <Container>
-          <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-2">
+          <div className="mx-auto grid max-w-4xl gap-6 lg:grid-cols-5">
+            <Card className="lg:col-span-3">
+              <h2 className="text-lg font-semibold text-navy">Send us a message</h2>
+              <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                Submit the form below and our team will get back to you.
+              </p>
+              <div className="mt-6">
+                <ContactForm />
+              </div>
+            </Card>
+
+            <div className="flex flex-col gap-6 lg:col-span-2">
             <Card>
               <h2 className="text-lg font-semibold text-navy">General inquiries</h2>
               <p className="mt-3 text-sm leading-relaxed text-slate-600">
@@ -45,12 +57,12 @@ export default function ContactPage() {
               </div>
             </Card>
 
-            <Card className="md:col-span-2">
+            <Card>
               <h2 className="text-lg font-semibold text-navy">Book a consultation</h2>
               <p className="mt-3 text-sm leading-relaxed text-slate-600">
                 Ready to discuss your results? Schedule a metabolic review with our team on the homepage.
               </p>
-              <div className="mt-5 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-5 flex flex-col gap-3">
                 <Button href="/#consultation" variant="secondary">
                   Book Consultation
                 </Button>
@@ -62,6 +74,7 @@ export default function ContactPage() {
                 </Link>
               </div>
             </Card>
+            </div>
           </div>
 
           <p className="mx-auto mt-10 max-w-3xl text-center text-xs leading-relaxed text-slate-500">
